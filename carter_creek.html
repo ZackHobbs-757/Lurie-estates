@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lurie Estates | Bio</title>
+  <!-- Bootstrap CSS -->
+  <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+  />
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+  <link rel="stylesheet" href="static/style.css">
+  <style>
+
+    .container.gallery-container {
+        background-color: #fff;
+        color: #35373a;
+        min-height: 100vh;
+        padding: 30px 50px;
+    }
+    
+    .gallery-container h1 {
+        text-align: center;
+        margin-top: 50px;
+        font-family: 'Droid Sans', sans-serif;
+        font-weight: bold;
+    }
+    
+    .gallery-container p.page-description {
+        text-align: center;
+        margin: 25px auto;
+        font-size: 18px;
+        color: #999;
+    }
+    
+    .tz-gallery {
+        padding: 40px;
+    }
+    
+    /* Override bootstrap column paddings */
+    .tz-gallery .row > div {
+        padding: 2px;
+    }
+    
+    .tz-gallery .lightbox img {
+        width: 100%;
+        border-radius: 0;
+        position: relative;
+    }
+    
+    .tz-gallery .lightbox:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -13px;
+        margin-left: -13px;
+        opacity: 0;
+        color: #000000;
+        font-size: 26px;
+        font-family: 'Glyphicons Halflings';
+        content: '\e003';
+        pointer-events: none;
+        z-index: 9000;
+        transition: 0.4s;
+    }
+    
+    
+    .tz-gallery .lightbox:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-color: rgba(46, 132, 206, 0.7);
+        content: '';
+        transition: 0.4s;
+    }
+    
+    .tz-gallery .lightbox:hover:after,
+    .tz-gallery .lightbox:hover:before {
+        opacity: 1;
+    }
+    
+    .baguetteBox-button {
+        background-color: transparent !important;
+    }
+    
+    @media(max-width: 768px) {
+        body {
+            padding: 0;
+        }
+    }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow mobile-trim">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html"><img src="static/lurie_estates_logo.PNG" class="nav-logo"><img src="static/lurie_estates_logo_text.PNG" class="nav-logo-text"></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#properties">Properties</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#reviews">Reviews</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="teamDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Team
+            </a>
+            <ul class="dropdown-menu bg-main" aria-labelledby="teamDropdown">
+              <li><a class="dropdown-item" href="bio.html#max">Max Lurie</a></li>
+              <li><a class="dropdown-item" href="bio.html#witman">Witman Forkë</a></li>
+              <li><a class="dropdown-item" href="bio.html#carlos">Carlos Valles</a></li>
+              <li><a class="dropdown-item" href="bio.html#jo">Jo Bailey</a></li>
+              <li><a class="dropdown-item" href="bio.html#zack">Zack Hobbs</a></li>
+              <li><a class="dropdown-item" href="bio.html#patricio">Patricio Romero</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="modal fade" id="exampleLightbox" tabindex="-1" aria-labelledby="exampleLightboxLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-black">
+        <div class="modal-header mobile-hidden">
+          <h5 class="modal-title" id="exampleLightboxLabel">Carter Creek</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-black mobile-trim">
+          <div id="lightboxExampleCarousel" class="carousel slide">
+            <div class="carousel-inner ratio ratio-16x9 bg-dark">
+              <div class="carousel-item text-center active">
+                <img src="static/carter_creek_c (1).PNG" class="img-fluid mh-100">
+              </div>
+              <div class="carousel-item text-center">
+                <img src="static/carter_creek_c (2).PNG" class="img-fluid mh-100">
+              </div>
+              <div class="carousel-item text-center">
+                <img src="static/carter_creek_c (3).PNG" class="img-fluid mh-100">
+              </div>
+              <div class="carousel-item text-center">
+                <img src="static/carter_creek_c (4).PNG" class="img-fluid mh-100">
+              </div>
+              <div class="carousel-item text-center">
+                <img src="static/carter_creek_c (5).PNG" class="img-fluid mh-100">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#lightboxExampleCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#lightboxExampleCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Description Section -->
+   <div style="height: 80px;"></div>
+  <section id="description" class="container">
+    <div class="section-title">
+      <h1>3514 Carter Creek</h1>
+    </div>
+    
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <div class="row justify-content-center">
+          <a href="#" class="col-sm-8 mt-3" data-bs-toggle="modal" data-bs-target="#exampleLightbox">
+            <img data-bs-target="#lightboxExampleCarousel" data-bs-slide-to="0" src="static/carter_creek_c (1).PNG" class="img-fluid">
+          </a>
+          <div class="col-sm-4 mt-3">
+            <a href="#" class="col-sm-4 mt-3 mobile-hidden" data-bs-toggle="modal" data-bs-target="#exampleLightbox">
+              <img data-bs-target="#lightboxExampleCarousel" data-bs-slide-to="1" src="static/carter_creek_c (2).PNG" class="img-fluid">
+            </a>
+            <a href="#" class="col-sm-4 mt-3 mobile-hidden" data-bs-toggle="modal" data-bs-target="#exampleLightbox">
+              <img data-bs-target="#lightboxExampleCarousel" data-bs-slide-to="2" src="static/carter_creek_c (3).PNG" class="mt-2 img-fluid">
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-5 col-md-4">
+        <div class="col justify-content-center">
+          <a href="#" class="col-sm-4 mt-3 mobile-hidden" data-bs-toggle="modal" data-bs-target="#exampleLightbox">
+            <img data-bs-target="#lightboxExampleCarousel" data-bs-slide-to="3" src="static/carter_creek_c (4).PNG" class="img-fluid">
+          </a>
+          <a href="#" class="col-sm-4 mt-3 mobile-hidden" data-bs-toggle="modal" data-bs-target="#exampleLightbox">
+            <img data-bs-target="#lightboxExampleCarousel" data-bs-slide-to="4" src="static/carter_creek_c (5).PNG" class="mt-2 img-fluid">
+          </a>
+        </div>
+      </div>
+      <div class="mt-5 col-md-8">
+        <h2>Property Description</h2>
+        <p>
+          Nestled in the heart of Bryan, this meticulously maintained 4-bedroom, 2-bathroom home is a perfect blend of comfort and convenience. Boasting a spacious living and dining area combination, the home also features a 2-car garage. Step outside to discover a screened-in porch, ideal for year-round enjoyment. The backyard is a true retreat, complete with an inviting inground pool, a large expanse of green space, and additional storage sheds. The property sits on a sizable lot with a sprinkler system and is fully fenced, providing both privacy and security. Enjoy outdoor gatherings on the patio or explore the nearby Tanglewood Community Park, which offers picnic tables, a covered pavilion, tennis courts, a splash pad, open green fields, playground equipment, and more. The newly renovated, award-winning Sul Ross Elementary School, Bryan High School, shopping centers, grocery stores, and dining options are conveniently located within a mile radius, with Texas A&M University just a short 2.5-mile drive away. All leases participate in the Latchel Resident Benefit package. The additional fee for this package is $40 per month.
+        </p>
+        <p>Contact us with any questions about renting, touring, or anything else by emailing max@lurieestates.com or by visiting our <a href="/contact.html">contact page</a>.</p>
+      </div>
+      <div class="mt-5 col-md-12">
+        <a href="#" class="col-sm-8 mt-3 desktop-hidden" data-bs-toggle="modal" data-bs-target="#exampleLightbox">
+          <img data-bs-target="#lightboxExampleCarousel" data-bs-slide-to="0" src="static/carter_creek_c (5).PNG" class="img-fluid">
+        </a>
+    </div>
+  </section>
+
+  <!-- Interior Details Section -->
+  <section id="interior" class="container">
+    <div class="section-title">
+      <h2>Interior Details</h2>
+    </div>
+    <div class="row listing-details">
+      <div class="col-md-6">
+        <h5>Bedrooms & Bathrooms</h5>
+        <p><strong>Bedrooms:</strong> 4</p>
+        <p><strong>Bathrooms:</strong> 2 (Full Bathrooms: 2)</p>
+        <p><strong>Total Interior Livable Area:</strong> 1,759 sqft</p>
+      </div>
+      <div class="col-md-6">
+        <h5>Heating & Cooling</h5>
+        <p><strong>Heating:</strong> Natural Gas, Central</p>
+        <p><strong>Cooling:</strong> Central Air, Electric, Ceiling Fan</p>
+      </div>
+      <div class="col-md-6">
+        <h5>Appliances & Features</h5>
+        <p><strong>Laundry:</strong> Hookups, Washer Hookup</p>
+        <p><strong>Features:</strong> Ceiling Fan(s), Laminate Counters, Storage, Window Treatments</p>
+        <p><strong>Flooring:</strong> Carpet, Laminate</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Property Features Section -->
+  <section id="property" class="container">
+    <div class="section-title">
+      <h2>Property Features</h2>
+    </div>
+    <div class="row listing-details">
+      <div class="col-md-6">
+        <h5>Parking & Structure</h5>
+        <p><strong>Parking:</strong> Covered (Contact manager for details)</p>
+        <p><strong>Stories:</strong> 1</p>
+      </div>
+      <div class="col-md-6">
+        <h5>Exterior & Additional Features</h5>
+        <p>
+          <strong>Exterior Features:</strong> Screened porch, Inground pool, Large green space, Additional storage sheds
+        </p>
+        <p>
+          <strong>Additional:</strong> Sprinkler system, Fully fenced, Patio for gatherings, Grounds care included in rent, Garage Door Opener, Smoke Detector(s), Water Heater, Roof Type: Composition
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tour" class="container">
+    <div class="section-title">
+      <h2>Photo Tour</h2>
+      <p class="desktop-hidden">Click on the photos below to see more.</p>
+    </div>
+    <div class="row listing-details">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-1">
+        <strong>Email:</strong>
+        <a href="mailto:max@lurieestates.com" class="text-white text-decoration-none">max@lurieestates.com</a>
+      </p>
+      <p class="mb-3">
+        <a href="https://www.linkedin.com/company/lurie-estates/" target="_blank" class="text-white text-decoration-none me-3">
+          <!-- Replace with your LinkedIn icon asset or use an icon library -->
+          <img src="static\linkedin_logo.webp" alt="LinkedIn" style="width: 24px; height: 24px; vertical-align: middle;">
+        </a>
+        <a href="https://www.airbnb.com/users/show/472036509" target="_blank" class="text-white text-decoration-none">
+          <!-- Replace with your Airbnb icon asset or use an icon library -->
+          <img src="static\airbnb_logo.png" alt="Airbnb" style="width: 24px; height: 24px; vertical-align: middle;">
+        </a>
+      </p>
+      <p class="small mb-0">&copy; 2025 Lurie Estates. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+  <!-- Custom JS for Scroll Animations -->
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray("section").forEach(function (section) {
+      gsap.from(section.querySelector(".section-title"), {
+        opacity: 0,
+        y: 10,
+        duration: 1,
+        scrollTrigger: {
+          trigger: section,
+          start: "top 80%"
+        }
+      });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+  const photoSections = [
+    {
+      title: "Exterior",
+      id: "exterior",
+      imageNumbers: [29, 30, 31, 32]
+    },
+    {
+      title: "Kitchen",
+      id: "kitchen",
+      imageNumbers: [37, 38, 39, 40, 41]
+    },
+    {
+      title: "Living Room",
+      id: "living",
+      imageNumbers: [33, 34, 35, 36]
+    },
+    {
+      title: "Bedroom #1",
+      id: "bedroom1",
+      imageNumbers: [2, 3, 4]
+    },
+    {
+      title: "Bathroom #1",
+      id: "bathroom1",
+      imageNumbers: [5, 6]
+    },
+    {
+      title: "Bedroom #2",
+      id: "bedroom2",
+      imageNumbers: [7, 8, 15]
+    },
+    {
+      title: "Bedroom #3",
+      id: "bedroom3",
+      imageNumbers: [9, 10, 11, 12]
+    },
+    {
+      title: "Bedroom #4",
+      id: "bedroom4",
+      imageNumbers: [11, 12]
+    },
+    {
+      title: "Bathroom #2",
+      id: "bathroom2",
+      imageNumbers: [13, 14]
+    },
+    {
+      title: "Backyard",
+      id: "backyard",
+      imageNumbers: [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+    },
+    {
+      title: "Patio",
+      id: "patio",
+      imageNumbers: [27, 28]
+    },
+  ];
+
+  const imagePath = "static/CarterCreekPhotos/carter_creek ";
+  const imageExtension = ".PNG";
+  const tourContainer = document.getElementById("tour");
+
+  photoSections.forEach((section) => {
+    const sectionHtml = document.createElement("div");
+    sectionHtml.classList.add("col-md-12", "mt-4");
+    sectionHtml.innerHTML = `
+      <h5>${section.title}</h5>
+      <div class="row justify-content-left">
+        ${section.imageNumbers.map((num, index) => `
+          <a href="#" class="col-sm-3 mt-3 ${index > 0 ? "mobile-hidden" : ""}" 
+             data-bs-toggle="modal" data-bs-target="#${section.id}Lightbox">
+            <img data-bs-target="#lightbox${section.id}Carousel" 
+                 data-bs-slide-to="${index}" 
+                 src="${imagePath}(${num})${imageExtension}" 
+                 class="img-fluid">
+          </a>
+        `).join('')}
+      </div>
+    `;
+    tourContainer.appendChild(sectionHtml);
+
+    // Create lightbox modal
+    const lightboxHtml = document.createElement("div");
+    lightboxHtml.classList.add("modal", "fade");
+    lightboxHtml.id = `${section.id}Lightbox`;
+    lightboxHtml.tabIndex = "-1";
+    lightboxHtml.setAttribute("aria-labelledby", `${section.id}LightboxLabel`);
+    lightboxHtml.setAttribute("aria-hidden", "true");
+
+    lightboxHtml.innerHTML = `
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content bg-black">
+          <div class="modal-header mobile-hidden">
+            <h5 class="modal-title" id="${section.id}LightboxLabel">Carter Creek - ${section.title}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body bg-black mobile-trim">
+            <div id="lightbox${section.id}Carousel" class="carousel slide">
+              <div class="carousel-inner ratio ratio-16x9 bg-dark">
+                ${section.imageNumbers.map((num, index) => `
+                  <div class="carousel-item text-center ${index === 0 ? "active" : ""}">
+                    <img src="${imagePath}(${num})${imageExtension}" class="img-fluid mh-100">
+                  </div>
+                `).join('')}
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#lightbox${section.id}Carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#lightbox${section.id}Carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(lightboxHtml);
+  });
+});
+
+
+  </script>
+</body>
+</html>
