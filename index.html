@@ -13,6 +13,17 @@
   <link rel="stylesheet" href="static/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+  <!-- Standard favicon -->
+  <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
+
+<!-- For Apple devices -->
+  <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png" />
+
+<!-- For different sizes -->
+  <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png" />
+
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow mobile-trim">
@@ -52,7 +63,6 @@
               <li><a class="dropdown-item" href="bio.html#max">Max Lurie</a></li>
               <li><a class="dropdown-item" href="bio.html#witman">Witman Forkë</a></li>
               <li><a class="dropdown-item" href="bio.html#carlos">Carlos Valles</a></li>
-              <li><a class="dropdown-item" href="bio.html#jo">Jo Bailey</a></li>
               <li><a class="dropdown-item" href="bio.html#zack">Zack Hobbs</a></li>
               <li><a class="dropdown-item" href="bio.html#patricio">Patricio Romero</a></li>
             </ul>
@@ -81,34 +91,96 @@
     </div>
   </header>
 
-  <!-- Rental Properties Section -->
-  <section id="properties" class="container">
-    <h2 class="text-center mb-5">Our Properties</h2>
-    <div class="row">
-      <!-- Property Card 1 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="static/carter_creek_c (1).PNG" class="card-img-top" alt="Property 1" />
-          <div class="card-body">
-            <h5 class="card-title">Carter Creek</h5>
-            <p class="card-text">4 bedroom house in Bryan, TX</p>
-            <a href="carter_creek.html" class="btn btn-outline-primary">View Details</a>
-          </div>
-        </div>
-      </div>
-      <!-- Property Card 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="static/red_snapper (3).PNG" class="card-img-top" alt="Property 2" />
-          <div class="card-body">
-            <h5 class="card-title">Red Snapper</h5>
-            <p class="card-text">Entire townhouse in South Padre Island, TX            </p>
-            <a href="https://www.airbnb.com/rooms/681054015649113977?guests=1&adults=1&s=67&unique_share_id=bf5271ce-0396-4e08-a70b-437bdb2d772d" class="btn btn-outline-primary">View Details</a>
-          </div>
+<!-- Rental Properties Section -->
+<section id="properties" class="container">
+  <h2 class="text-center mb-5">Our Properties</h2>
+  <div class="row">
+    <!-- Property Card 1 Carter creek -->
+    <div class="col-md-4 mb-4">
+      <div class="propertycard">
+        <img src="static/carter_creek_c (1).PNG" class="card-img-top" alt="Property 1" />
+        <div class="card-body">
+          <h5 class="card-title">Carter Creek</h5>
+          <h6 class="card-title">Long Term Rental</h6>
+          <p class="card-text">Charming 4-bedroom Bryan home offering a resort-like backyard with an inground pool, BBQ area, and spacious lawn for outdoor enjoyment. The screened-in porch and private fenced yard create the perfect space to unwind. Prime location near Tanglewood Community Park, local amenities, and only 2.5 miles from Texas A&M University.</p>
+          <a href="carter_creek.html" class="btn btn-outline-primary">View details</a>
         </div>
       </div>
     </div>
-  </section>
+    <!-- Property Card 2 Red snapper-->
+    <div class="col-md-4 mb-4">
+      <div class="propertycard">
+        <img src="static/red_snapper (3).PNG" class="card-img-top" alt="Property 2" />
+        <div class="card-body">
+          <h5 class="card-title">Red Snapper</h5>
+          <h6 class="card-title">South Padre Beach Airbnb</h6>
+          <p class="card-text">This beauty is only steps from the grocery store, the popular Grapevine Café, numerous restaurants and of course, THE BEACH!  Fully renovated with great outdoor living, barbecue area and hot tub. Large balconies with partial view to the gulf and bay and perfect spot to enjoy the famous island's fireworks display.</p>
+          <a href="https://www.airbnb.com/rooms/681054015649113977?guests=1&adults=1&s=67&unique_share_id=bf5271ce-0396-4e08-a70b-437bdb2d772d" class="btn btn-outline-primary">View AirBnb</a>
+        </div>
+      </div>
+    </div>
+    <!-- Property Card 3 Prospect ave-->
+    <div class="col-md-4 mb-4">
+      <div class="propertycard">
+        <img src="static/Prospect_(1).webp" class="card-img-top" alt="Property 3" />
+        <div class="card-body">
+          <h5 class="card-title">Prospect Ave</h5>
+          <h6 class="card-title">City Airbnb</h6>
+          <p class="card-text">Stunning home featuring a resort-style backyard with a heated pool and spa, outdoor kitchen, covered patio with fireplace, and spacious grassy yard. Perfect for groups looking to relax, entertain, or explore the city's best attractions. Ideally located near Lakewood, Lower Greenville, White Rock Lake, and downtown Dallas.</p>
+          <a href="https://www.airbnb.com/rooms/1592443770248617200?check_in=2026-02-09&check_out=2026-02-13&location=Dallas%2C%20TX&search_mode=regular_search&source_impression_id=p3_1768172397_P3qLHtjAYCYSjFp1&previous_page_section_name=1001&federated_search_id=04a3f296-2877-4047-85be-b47b0edc94aa" class="btn btn-outline-primary">View AirBnb</a>
+        </div>
+      </div>
+    </div>
+    <!-- Property Card 4 Oleander A-->
+    <div class="col-md-4 mb-4">
+      <div class="propertycard">
+        <img src="static/property4.jpg" class="card-img-top" alt="Property 4" />
+        <div class="card-body">
+          <h5 class="card-title">Oleander Side A</h5>
+          <h6 class="card-title">South Padre Beach Airbnb</h6>
+          <p class="card-text">Description of property location</p>
+          <a href="#" class="btn btn-outline-primary">View AirBnb</a>
+        </div>
+      </div>
+    </div>
+    <!-- Property Card 5 Campeche A -->
+    <div class="col-md-4 mb-4">
+      <div class="propertycard">
+        <img src="static/Campeche_(1).jpeg" class="card-img-top" alt="Property 5" />
+        <div class="card-body">
+          <h5 class="card-title">Campeche Side A</h5>
+          <h6 class="card-title">South Padre Beach Airbnb</h6>
+          <p class="card-text">Luxurious beachside retreat just steps from the sand and minutes from top restaurants and attractions. Fully renovated with high-end finishes, a private pool, and a BBQ area. Perfect for relaxing, entertaining, or exploring South Padre’s vibrant island culture</p>
+          <a href="https://www.airbnb.com/rooms/1543105318897927139?check_in=2026-01-02&check_out=2026-01-04&location=121%20East%20Campeche%20Street%2C%20South%20Padre%20Island%2C%20TX&search_mode=regular_search&adults=1&children=0&infants=0&pets=0&source_impression_id=p3_1766892912_P37rRVJYwWEYvEbv&previous_page_section_name=1001&federated_search_id=7e7d081c-aa0e-4520-b734-3ae89d3417a7" class="btn btn-outline-primary">View AirBnb</a>
+        </div>
+      </div>
+    </div>
+    <!-- Property Card 6 Oleander B-->
+    <div class="col-md-4 mb-4">
+      <div class="propertycard">
+        <img src="static/property6.jpg" class="card-img-top" alt="Property 6" />
+        <div class="card-body">
+          <h5 class="card-title">Oleander Side B</h5>
+          <h6 class="card-title">South Padre Beach Airbnb</h6>
+          <p class="card-text">Description of property location</p>
+          <a href="https://spirentals.com/property-info/105b-e-oleander-casa-isabella.html" class="btn btn-outline-primary">View AirBnb</a>
+        </div>
+      </div>
+    </div>
+    <!-- Property Card 7 Campeche B-->
+    <div class="col-md-4 mb-4">
+      <div class="propertycard">
+        <img src="static/Campeche_(2).jpeg" class="card-img-top" alt="Property 7" />
+        <div class="card-body">
+          <h5 class="card-title">Campeche Side B</h5>
+          <h6 class="card-title">South Padre Beach Airbnb</h6>
+          <p class="card-text">Beautiful oceanside escape situated footsteps from the shore and near the best restaurants and entertainment. Completely remodeled with premium touches, including a private pool and BBQ patio. Great for relaxation, gatherings, or experiencing the lively South Padre Island scene.</p>
+          <a href="https://www.airbnb.com/rooms/1543135725595487733?check_in=2026-01-09&check_out=2026-01-11&location=121%20East%20Campeche%20Street%2C%20South%20Padre%20Island%2C%20TX&search_mode=regular_search&adults=1&children=0&infants=0&pets=0&source_impression_id=p3_1766892158_P3JMaRE0hJyE8_HN&previous_page_section_name=1001&federated_search_id=38b5a15d-a113-4420-adc2-5a93bea6b66c" class="btn btn-outline-primary">View AirBnb</a>
+        </div>
+      </div>
+    </div>
+  </div>  <!-- ✅ Row closes AFTER all cards -->
+</section> <!-- ✅ Section closes last -->
 
   <!-- Reviews Section with Parallax Background -->
   <section id="reviews" class="parallax-section">
@@ -141,7 +213,7 @@
     <h2 class="text-center mb-5">Meet Our Team</h2>
     <div class="row">
       <div class="col-md-4 mb-4">
-        <div class="card">
+        <div class="teamcard">
           <img src="static\max_headshot.jpg" class="card-img-top" alt="Staff 1" />
           <div class="card-body text-center">
             <h5 class="card-title">Max Lurie</h5>
@@ -151,7 +223,7 @@
         </div>
       </div>
       <div class="col-md-4 mb-4">
-        <div class="card">
+        <div class="teamcard">
           <img src="static\witman_headshot.jpg" class="card-img-top" alt="Staff 2" />
           <div class="card-body text-center">
             <h5 class="card-title">Witman Forkë</h5>
@@ -161,7 +233,7 @@
         </div>
       </div>
       <div class="col-md-4 mb-4">
-        <div class="card">
+        <div class="teamcard">
           <img src="static\carlos_headshot.jpg" class="card-img-top" alt="Staff 3" />
           <div class="card-body text-center">
             <h5 class="card-title">Carlos Valles</h5>
@@ -170,18 +242,8 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="static\jo_headshot.jpg" class="card-img-top" alt="Staff 3" />
-          <div class="card-body text-center">
-            <h5 class="card-title">Jo Bailey</h5>
-            <p class="card-text">Director of Administrative Operations</p>
-            <a href="bio.html#jo" class="btn btn-outline-primary">View Bio</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card">
+      <div class="col-md-4 offset-md-2  mb-4">
+        <div class="teamcard">
           <img src="static\zack_headshot.jpg" class="card-img-top" alt="Staff 3" />
           <div class="card-body text-center">
             <h5 class="card-title">Zack Hobbs</h5>
@@ -191,7 +253,7 @@
         </div>
       </div>
       <div class="col-md-4 mb-4">
-        <div class="card">
+        <div class="teamcard">
           <img src="static\patricio_headshot.jpg" class="card-img-top" alt="Staff 3" />
           <div class="card-body text-center">
             <h5 class="card-title">Patricio Romero</h5>
