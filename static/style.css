@@ -1,0 +1,267 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  scroll-behavior: smooth;
+  background-color:  rgb(30, 30, 30);
+  color: #f3dd92; /* Gold text */
+}
+
+section {
+  padding: 60px 0;
+}
+
+/* Hero Section with Layered Backgrounds */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: url('hero-bg.jpg') no-repeat center center/cover;
+}
+
+.hero .layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero .layer.layer1 {
+  background-image: url('layer1.png');
+}
+
+.hero .layer.layer2 {
+  background-image: url('layer2.png');
+}
+
+.hero .content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #f3dd92;
+}
+
+.bg-gold {
+  background-color: #f3dd92;
+  
+}
+
+.btn-outline-primary {
+  color: #f3dd92;
+  border: 2px solid #f3dd92;
+  background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+  color: black;
+  background-color: #f3dd92;
+  border-color: #f3dd92;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: rgb(0, 0, 0);
+  padding: 15px 0;
+}
+
+.navbar a {
+  color: #f3dd92; /* Gold links */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: color 0.3s;
+}
+
+.bg-main {
+  background-color:  rgb(30, 30, 30);
+}
+
+/*Property card */
+.propertycard {
+  background-color: black;
+  color: white;
+  box-shadow: black 0px 0px 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  height: 200px; 
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 15px;  /* Equal spacing between all elements */
+}
+
+/* Equal spacing for text elements */
+.card-body h5,
+.card-body h6,
+.card-body p {
+  margin: 0;  /* Remove default margins */
+  flex-shrink: 0;
+}
+
+/* Description takes remaining space */
+.card-body p {
+  flex-grow: 1;
+}
+
+.teamcard {
+
+  background-color: black;
+
+  color: white;
+
+  box-shadow: black 0px 0px 10px;
+
+}
+
+.navbar a:hover {
+  color: white;
+}
+
+
+/* Parallax Section */
+.parallax-section {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.parallax-section .bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-position: center;
+  background-size: cover;
+  filter: brightness(0.7);
+}
+
+/* Bio Section */
+.bio-section {
+  position: relative;
+  background: url('bio-bg.jpg') no-repeat center center/cover;
+  background-size: cover;
+}
+
+.bio-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:  rgb(30, 30, 30);
+  z-index: 5;
+}
+
+.bio-content {
+  position: relative;
+  z-index: 10;
+  color: #f3dd92; /* Gold text */
+}
+
+/* Footer */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: #f3dd92; /* Gold links */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: white;
+}
+
+footer img {
+  width: 24px;
+  height: 24px;
+  margin: 0 5px;
+  vertical-align: middle;
+}
+
+.logo {
+  width: 24px; 
+  height: 24px; 
+  vertical-align: middle;
+  transition : width 0.3s, height 0.3s;
+}
+.logo:hover {
+  width: 32px;
+  height: 32px;
+}
+
+.bio-pic {
+  max-height: 450px;
+  width: auto;
+  border-radius: 20%;
+  margin-top: 10px;
+}
+
+.dropdown-item:hover {
+  background-color: #f3dd92;
+  color: black;
+}
+
+.nav-logo-text {
+  max-height: 40px; 
+  width: auto;
+}
+
+.nav-logo {
+  max-height: 60px; 
+  width: auto;
+}
+
+.modal-header {
+    border-color: #f3dd92;
+}
+
+a {
+  color: #756dff;
+}
+
+@media (min-width: 768px) {
+  .desktop-hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-logo-text {
+    display: none;
+  }
+  .mobile-hidden {
+    display: none;
+  }
+  .mobile-trim {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .nav-logo {
+    max-height: 40px; 
+    width: auto;
+  }
+}
